@@ -1,12 +1,13 @@
 package com.wynsbin.verificationcodeinputview;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
 import com.wynsbin.vciv.VerificationCodeInputView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements VerificationCodeInputView.OnInputListener {
 
@@ -36,5 +37,12 @@ public class MainActivity extends AppCompatActivity implements VerificationCodeI
     @Override
     public void onInput() {
 
+    }
+
+    @Override
+    public void onInputPlus(int codesSize, View[] mUnderLineViews) {
+        for (int i = 0; i < codesSize; i++) {
+            mUnderLineViews[i].setBackgroundColor(Color.parseColor("#1E1F20"));
+        }
     }
 }

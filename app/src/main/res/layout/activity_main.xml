@@ -77,7 +77,7 @@
             app:vciv_et_text_color="#333333"
             app:vciv_et_text_size="18sp"
             app:vciv_et_underline_default_color="@android:color/holo_green_light"
-            app:vciv_et_underline_focus_color="@android:color/holo_blue_bright"
+            app:vciv_et_underline_focus_color="@android:color/holo_green_light"
             app:vciv_et_underline_height="3dp"
             app:vciv_et_underline_show="true"
             app:vciv_et_width="58dp" />
