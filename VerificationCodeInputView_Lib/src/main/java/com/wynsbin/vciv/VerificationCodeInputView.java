@@ -503,6 +503,7 @@ public class VerificationCodeInputView extends RelativeLayout {
         } else {
             onInputListener.onInput();
         }
+        onInputListener.onInputPlus(mCodes.size(), mUnderLineViews);
     }
 
     /**
@@ -562,6 +563,8 @@ public class VerificationCodeInputView extends RelativeLayout {
         void onComplete(String code);
 
         void onInput();
+
+        void onInputPlus(int codesSize, View[] mUnderLineViews);
     }
 
     public void setOnInputListener(OnInputListener onInputListener) {
