@@ -527,6 +527,23 @@ public class VerificationCodeInputView extends RelativeLayout {
         showCode();
     }
 
+
+    /**
+     * 设置光标的颜色
+     *
+     * @param color
+     */
+    public void setEtCursorColor(String color) {
+        //设置光标的颜色
+        mEtCursorColor = Color.parseColor(color);
+        //停止开始的动画
+        this.valueAnimator.end();
+        this.valueAnimator.cancel();
+        //重新启动动画
+        setCursorView(mCursorViews[mCodes.size()]);
+    }
+
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
